@@ -21,19 +21,19 @@ class MainActivity : AppCompatActivity(), DataPass {
 
 //        val fragmentItem = findViewById<FragmentContainerView>(R.id.fragmentCItems)
 //        val fragmentCart = findViewById<FragmentContainerView>(R.id.fragmentCCart)
-        val fm = supportFragmentManager
-        val ft = fm.beginTransaction()
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
         val fragmentItem = ProductListingFragment()
 
-        ft.replace(R.id.fragmentCItems, ProductListingFragment())
-        ft.commit()
+        fragmentTransaction.replace(R.id.fragmentCItems, ProductListingFragment())
+        fragmentTransaction.commit()
 
 
-        val ft2 = fm.beginTransaction()
+        val secondTransaction = fragmentManager.beginTransaction()
         val fragmentCart = FragmentCart()
 
-        ft2.replace(R.id.fragmentCCart, FragmentCart())
-        ft2.commit()
+        secondTransaction.replace(R.id.fragmentCCart, FragmentCart())
+        secondTransaction.commit()
 
     }
 
