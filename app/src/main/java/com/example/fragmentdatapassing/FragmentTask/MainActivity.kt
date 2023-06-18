@@ -2,10 +2,10 @@ package com.example.fragmentdatapassing.FragmentTask
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.fragmentdatapassing.DataPass
+import com.example.fragmentdatapassing.RecyclerClickEvent
 import com.example.fragmentdatapassing.R
 
-class MainActivity : AppCompatActivity(), DataPass {
+class MainActivity : AppCompatActivity(), RecyclerClickEvent {
 
 
 

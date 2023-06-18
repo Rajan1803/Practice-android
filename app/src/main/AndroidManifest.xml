@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FragmentDataPassing"
         tools:targetApi="31">
-
+        <activity
+            android:name=".FragmentAddReplace"
+            android:exported="false" />
         <activity
             android:name=".ListViewActivity"
             android:exported="false" />
         <activity
             android:name=".FragmentTask.MainActivity"
-
-
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
