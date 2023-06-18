@@ -15,7 +15,7 @@ import com.example.fragmentdatapassing.R
  * Use the [FragmentCart.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FragmentCart : Fragment() {
+class FragmentCart() : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +25,7 @@ class FragmentCart : Fragment() {
         val view =  inflater.inflate(R.layout.fragment_cart, container, false)
         setFragmentResultListener("ItemData") { requestKey, bundle ->
             val value = bundle.getString("Item")
-            Log.d("passD","log msg")
+            Log.d("passD",value ?: "default in this")
 //            Toast.makeText(activity?.baseContext, "abbbc", Toast.LENGTH_SHORT).show()
         }
         return view

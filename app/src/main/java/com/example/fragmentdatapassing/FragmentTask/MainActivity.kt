@@ -22,11 +22,7 @@ class MainActivity : AppCompatActivity(), RecyclerClickEvent {
 //        val fragmentItem = findViewById<FragmentContainerView>(R.id.fragmentCItems)
 //        val fragmentCart = findViewById<FragmentContainerView>(R.id.fragmentCCart)
         val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        val fragmentItem = ProductListingFragment()
 
-        fragmentTransaction.replace(R.id.fragmentCItems, ProductListingFragment())
-        fragmentTransaction.commit()
 
 
         val secondTransaction = fragmentManager.beginTransaction()
@@ -34,6 +30,13 @@ class MainActivity : AppCompatActivity(), RecyclerClickEvent {
 
         secondTransaction.replace(R.id.fragmentCCart, FragmentCart())
         secondTransaction.commit()
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentItem = ProductListingFragment()
+
+        fragmentTransaction.replace(R.id.fragmentCItems, fragmentItem)
+        fragmentTransaction.commit()
+
+
 
     }
 
