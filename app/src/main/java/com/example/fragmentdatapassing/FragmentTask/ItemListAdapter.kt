@@ -28,18 +28,13 @@ class ItemListAdapter(): RecyclerView.Adapter<ItemListAdapter.ItemListViewHolder
         val txtviewItemName = holder.itemView.findViewById<TextView>(R.id.txtvItem)
         holder.itemView.findViewById<Button>(R.id.btnAddToCart).setOnClickListener {
 
-//            val fragmentTransition = fragmentManager.beginTransaction()
-//            fragmentTransition.replace(R.id.fragmentCCart,FragmentCart())
-//            fragmentTransition.commit()
-
-//            itemDelegate?.onClickAddCart("hello")
             itemDelegate?.onClickAddCart(txtviewItemName.text.toString() )
         }
         return holder
     }
 
     override fun onBindViewHolder(holder: ItemListViewHolder, position: Int) {
-
+        holder.itemView.findViewById<TextView>(R.id.txtvItem).text = Food.food[position].foodName
     }
 
     override fun getItemCount(): Int {

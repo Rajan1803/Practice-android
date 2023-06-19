@@ -20,25 +20,12 @@ class ProductListingFragment() : Fragment(), RecyclerClickEvent {
 
 
     override fun onClickAddCart(data: String) {
-        Log.d("ItemData","clicked")
-        Log.d("ItemData",activity?.supportFragmentManager.toString())
-        Log.d("ItemData",activity?.supportFragmentManager?.beginTransaction().toString())
-        val act = activity?.supportFragmentManager?.beginTransaction()
 
         val bundle = Bundle().apply{
             putString("Item",data)
         }
         setFragmentResult("ItemData",bundle)
-        if (act != null) {
-            act.replace(R.id.fragmentCCart,FragmentCart())
-            act.commit()
-        }
-//        val act = activity
-//        if (act != null) {
-//            val tt = act.fragmentManager
-//            tt.replace(R.id.fragmentCCart, FragmentCart())
-//            tt.commit()
-//        }
+
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
